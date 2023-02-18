@@ -11,7 +11,7 @@ class App extends React.Component {
         super(props);
         this.state = {
             currentPage: navItems[0],
-            isLoading: false,
+            isLoading: true,
         }
     }
 
@@ -27,8 +27,7 @@ class App extends React.Component {
         return (
             <div className="container-fluid">
                 <Header changePage={this.changePage} currentPage={this.state.currentPage}/>
-                {this.state.isLoading ? <Loader/> :
-                    <Main currentPage={this.state.currentPage} changeLoading={this.changeLoading}/>}
+                <Main currentPage={this.state.currentPage} changeLoading={this.changeLoading} isLoading={this.state.isLoading}/>
                 <Footer currentPage={this.state.currentPage}/>
             </div>
         );

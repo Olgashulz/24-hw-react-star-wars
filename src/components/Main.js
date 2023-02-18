@@ -4,8 +4,9 @@ import AboutMe from "./AboutMe";
 import StarWars from "./StarWars";
 import Contact from "./Contact";
 import {navItems} from "../utils/constants";
+import Loader from "./Loader";
 
-const Main = ({currentPage, changeLoading}) => {
+const Main = ({currentPage, changeLoading, isLoading}) => {
     switch (currentPage) {
         case navItems[1]:
             return <AboutMe/>;
@@ -14,7 +15,12 @@ const Main = ({currentPage, changeLoading}) => {
         case navItems[3]:
             return <Contact/>;
         default:
-            return <Home changeLoading={changeLoading}/>;
+            return (
+                // <>
+                //     {isLoading ? <Loader/> : <Home changeLoading={changeLoading}/>}
+                // </>
+                <Home changeLoading={changeLoading}/>
+            )
     }
 };
 

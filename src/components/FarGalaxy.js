@@ -12,11 +12,13 @@ class FarGalaxy extends Component {
         try {
             const response = await fetch(`${base_url}/v1/films/${film}`);
             const data = await response.json();
-            this.setState({text: data.opening_crawl})
+            // this.setState({text: data.opening_crawl}, () => {
+            //     this.props.changeLoading();
+            // });
+           this.setState({text: data.opening_crawl});
         } catch (error) {
             console.error('Error fetching data:', error);
         }
-        //this.props.changeLoading();
     }
 
     render() {
