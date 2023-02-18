@@ -1,0 +1,357 @@
+/*Header*/
+header {
+    background-color: rgba(60, 69, 67, 0.6);
+    border-radius: 15px 15px 0 0;
+}
+
+.fixed-top {
+    margin-left: 0.7rem !important;
+    margin-right: 0.7rem !important;
+}
+
+.title {
+    font-size: 3em !important;
+    padding-top: 115px !important;
+    padding-bottom: 65px !important;
+}
+
+.title-dreamTeam {
+    padding: 15px 0;
+    margin-bottom: 0;
+}
+
+/*main*/
+.meinContainer {
+    height: 63vh;
+}
+
+.border {
+    border-radius: 0 0 15px 15px;
+    border-color: rgb(197 123 187) !important;
+}
+
+.clearfix {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.farGalaxy {
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.bottom-left {
+    border-bottom-left-radius: 15px;
+}
+
+.bottom-right {
+    border-bottom-right-radius: 15px;
+}
+
+.float-start img {
+    box-shadow: 2px 3px 9px 2px #55a7d9;
+    margin-bottom: 2rem !important;
+    margin-right: 2rem !important;
+}
+
+.me-3 {
+    margin-right: 2rem !important;
+}
+
+.float-end {
+    margin-left: 2rem !important;
+    box-shadow: 0 0 7px 1px rgb(197 123 187 / 80%) inset;
+}
+
+/*footer*/
+footer {
+    background-color: rgba(60, 69, 67, 0.6);
+    border-radius: 0 0 15px 15px;
+    height: 6em;
+}
+
+footer p {
+    margin-top: auto;
+    font-size: 0.8em;
+}
+
+.email {
+    font-size: 1.2em;
+    color: #db60ca;
+}
+
+.btn {
+    width: 160px
+}
+
+/*Loader*/
+.loaderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #009eff;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-bottom: 4px solid #ff00dd;
+    border-left: 4px solid transparent;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*Star wors*/
+.starWars {
+    height: 63vh;
+    position: relative;
+}
+
+.contentBox {
+    position: absolute;
+    width: 18em;
+    height: 50em;
+    bottom: 0;
+    left: 50%;
+    margin-left: -9em;
+    font-size: 350%;
+    font-weight: bold;
+    text-align: justify;
+    overflow: hidden;
+    transform-origin: 50% 100%;
+    transform: perspective(300px) rotateX(25deg);
+}
+
+.contentBox:after {
+    position: absolute;
+    content: ' ';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 60%;
+    background-image: linear-gradient(top, rgba(0, 0, 0, 1) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.starWars__text {
+    position: absolute;
+    top: 100%;
+    animation: scroll 100s linear 0s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -170%;
+    }
+}
+
+/*About me*/
+.aboutMe {
+    padding-top: 100px;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(60, 69, 67, 0.6);
+    box-shadow: 2px 3px 9px 2px #55a7d9;
+    border-radius: 5px;
+}
+
+.cardInfo {
+    padding: 20px;
+    width: 200px;
+    color: white;
+    font-size: 14px;
+}
+
+.cardText span {
+    padding-left: 8px;
+}
+
+.cardPhoto img {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.aboutMe h2 {
+    padding-bottom: 30px;
+
+}
+
+/*navigation*/
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 15px 0;
+    cursor: pointer;
+    background-image: url(http://localhost:3000/static/media/sky.25e4c5f….jpg);
+    background-color: black;
+}
+
+.menu li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #ceebf9;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.menu li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    right: 100%;
+    transform: translateX(100%);
+    background-color: #009eff;
+    transition: all 0.2s ease-out;
+    box-shadow: 0 0 22px 4px #009eff;
+}
+
+.menu li a:hover::before {
+    width: 100%;
+}
+
+
+.menu li a:hover {
+    color: #a7d8ff;
+}
+
+/*button*/
+.border-button {
+    width: 170px;
+    padding: 10px 20px;
+    margin-left: 336px;
+    position: relative;
+    border: 1px solid #2196f3;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FFE818;
+    display: flex;
+    justify-content: center;
+}
+
+.border-button:before, .border-button:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    box-sizing: border-box;
+}
+
+.border-button:before {
+    bottom: 0;
+    left: 0;
+    border-left: 1px solid #2196f3;
+    border-top: 1px solid #2196f3;
+    transition: opacity 0s ease .8s, width .2s ease .4s, height .2s ease .6s;
+}
+
+.border-button:after {
+    top: 0;
+    right: 0;
+    border-right: 1px solid #2196f3;
+    border-bottom: 1px solid #2196f3;
+}
+
+.border-button:hover:before,
+.border-button:hover:after {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+
+.border-button:hover:before {
+    transition: opacity 0s ease .0s, width .2s ease .2s, height .2s ease;
+}
+
+.border-button:hover:after {
+    transition: opacity 0s ease .4s, width .2s ease .6s, height .2s ease .4s;
+}
+
+.border-button:hover {
+    background: rgba(255, 255, 255, .2);
+    box-shadow: 0 0 22px 4px #009eff59;
+    transition: box-shadow 1s;
+}
+
+.border-button input {
+    background-color: transparent;
+    color: #db60ca;
+}
+
+/*Form*/
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #2196f3;
+    box-shadow: 0 0 22px 4px #009eff59;
+    background-color: rgb(0 0 0 / 70%);
+    color: #fff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type="text"]::placeholder {
+    color: #ceebf9a6;
+}
+
+textarea::placeholder {
+    color: #ceebf9a6;
+}
+
+input[type=submit] {
+    border: none;
+}
+
+.form-container {
+    border-radius: 5px;
+    background-color: rgba(60, 69, 67, 0.6);
+    padding: 20px;
+    width: 600px;
+    margin: 50px auto;
+}
