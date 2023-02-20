@@ -16,7 +16,6 @@ class AboutMe extends Component {
         const dateOfSaveHero = localStorage.getItem("dateOfSaveHero");
 
         if (hero && checkExpirationDate(dateOfSaveHero)) {
-            console.log(hero)
             this.setState({
                 hero,
                 isLoading: false
