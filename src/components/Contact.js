@@ -2,26 +2,40 @@ import React, {Component} from 'react';
 import {base_url} from "../utils/constants";
 import Button from "./Button";
 import Loader from "./Loader";
+import Select from "./Select";
+import {checkExpirationDate} from "../utils/sevice"
 
 class Contact extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            planets: [],
             isLoading: true,
+            planets: ['wait...'],
         }
     }
 
-    async componentDidMount() {
-        try {
-            const response = await fetch(`${base_url}/v1/planets`);
-            const data = await response.json();
-            const planetNames = data.map(d => d.name);
-            this.setState({planets: planetNames, isLoading: false},
-            );
+    componentDidMount() {
+        const planets = JSON.parse(localStorage.getItem("planets"));
+        const dateOfSavePlanets = localStorage.getItem("dateOfSavePlanets");
 
-        } catch (error) {
-            console.error('Error fetching data:', error);
+        if (planets && checkExpirationDate(dateOfSavePlanets)) {
+            this.setState({
+                planets,
+                isLoading: false
+            })
+        } else {
+            fetch(`${base_url}/v1/planets`)
+                .then(response => response.json())
+                .then(data => data.map(d => d.name))
+                .then(p => {
+                    localStorage.setItem('planets', JSON.stringify(p));
+                    localStorage.setItem('dateOfSavePlanets', new Date().toString())
+                    this.setState({
+                            planets: p,
+                            isLoading: false,
+                        },
+                    )
+                })
         }
     }
 
@@ -41,11 +55,7 @@ class Contact extends Component {
                         <input type="text" id="lname" name="lastname" placeholder="Your last name.."/>
 
                         <label htmlFor="country">Country</label>
-                        <select id="country" name="country">
-                            {this.state.planets.map((planet, index) => (
-                                <option key={index} value={planet}>{planet}</option>
-                            ))}
-                        </select>
+                        <Select planets={this.state.planets}/>
                         <label htmlFor="subject">Subject</label>
                         <textarea id="subject" name="subject" placeholder="Write something.."
                                   style={{height: "200px"}}></textarea>

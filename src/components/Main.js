@@ -6,7 +6,7 @@ import Contact from "./Contact";
 import {navItems} from "../utils/constants";
 import Loader from "./Loader";
 
-const Main = ({currentPage, changeLoading, isLoading}) => {
+const Main = ({currentPage}) => {
     switch (currentPage) {
         case navItems[1]:
             return <AboutMe/>;
@@ -19,7 +19,7 @@ const Main = ({currentPage, changeLoading, isLoading}) => {
                 // <>
                 //     {isLoading ? <Loader/> : <Home changeLoading={changeLoading}/>}
                 // </>
-                <Home changeLoading={changeLoading}/>
+                <Home/>
             )
     }
 };

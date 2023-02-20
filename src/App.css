@@ -1,25 +1,3 @@
-/*Header*/
-header {
-    background-color: rgba(60, 69, 67, 0.6);
-    border-radius: 15px 15px 0 0;
-}
-
-.fixed-top {
-    margin-left: 0.7rem !important;
-    margin-right: 0.7rem !important;
-}
-
-.title {
-    font-size: 3em !important;
-    padding-top: 115px !important;
-    padding-bottom: 65px !important;
-}
-
-.title-dreamTeam {
-    padding: 15px 0;
-    margin-bottom: 0;
-}
-
 /*main*/
 .meinContainer {
     height: 63vh;
@@ -35,21 +13,6 @@ header {
     padding-bottom: 50px;
 }
 
-.farGalaxy {
-    font-size: 1.5em;
-    letter-spacing: 0.2em;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-.bottom-left {
-    border-bottom-left-radius: 15px;
-}
-
-.bottom-right {
-    border-bottom-right-radius: 15px;
-}
-
 .float-start img {
     box-shadow: 2px 3px 9px 2px #55a7d9;
     margin-bottom: 2rem !important;
@@ -62,6 +25,7 @@ header {
 
 .float-end {
     margin-left: 2rem !important;
+    background-color: #000;
     box-shadow: 0 0 7px 1px rgb(197 123 187 / 80%) inset;
 }
 
@@ -208,52 +172,6 @@ footer p {
 .aboutMe h2 {
     padding-bottom: 30px;
 
-}
-
-/*navigation*/
-.menu {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 15px 0;
-    cursor: pointer;
-    background-image: url(http://localhost:3000/static/media/sky.25e4c5f….jpg);
-    background-color: black;
-}
-
-.menu li {
-    margin: 0 20px;
-    position: relative;
-}
-
-.menu li a {
-    text-decoration: none;
-    color: #ceebf9;
-    font-size: 20px;
-    text-transform: uppercase;
-}
-
-.menu li a::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 3px;
-    bottom: -5px;
-    right: 100%;
-    transform: translateX(100%);
-    background-color: #009eff;
-    transition: all 0.2s ease-out;
-    box-shadow: 0 0 22px 4px #009eff;
-}
-
-.menu li a:hover::before {
-    width: 100%;
-}
-
-
-.menu li a:hover {
-    color: #a7d8ff;
 }
 
 /*button*/
